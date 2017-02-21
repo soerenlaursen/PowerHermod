@@ -12,9 +12,9 @@ https://python-pptx.readthedocs.org/en/latest/
 
 @author:     Soeren Laursen
 
-@copyright:  2014 FCOO. All rights reserved.
+@copyright:  2014, 2015, 2016, 2017 FCOO. All rights reserved.
 
-@license:    license
+@license:    See LICENSE file.
 
 @contact:    sln@fcoo.dk
 @deffield    updated: Updated
@@ -31,6 +31,9 @@ sudo pip install python-pptx
 
 Sometimes the powerpoint can be very large, increase postfix email size:
 postconf -e 'message_size_limit = 104857600'
+
+On Ubuntu 16.04 LTS
+- Not testet yet!
 
 Notes:
 Basic concept is that a briefing (be it pptx, odp, or pdf), is a collection of images, wrapped in a container.
