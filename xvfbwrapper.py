@@ -5,9 +5,7 @@
 #   * inspired by:
 #       PyVirtualDisplay: http://pypi.python.org/pypi/PyVirtualDisplay
 
-
 """wrapper for running display inside X virtual framebuffer (Xvfb)"""
-
 
 import os
 import fnmatch
