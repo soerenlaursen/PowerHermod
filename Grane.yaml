@@ -1,0 +1,6 @@
+---
+description:      Default 
+operator:         your@email.dk
+smtpserver: 127.0.0.1
+powerhermodConfigurations:  /home/prod/MYLOCATION/Briefinger
+cutycaptLocation: /bin/cutycapt
