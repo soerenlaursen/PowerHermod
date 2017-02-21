@@ -21,9 +21,9 @@ The best way to use powerHermod is to have a cron jobs, which runs each hour.
 Added support for multi configuration files in folder specified in Grane.yaml.
 
 
-# Roadmap ahead
+# Roadmap
 (2017-02-18)
-Extended to generate pdf files.
-Extended to attach the images as attachment to the presentation email.
-Extended to use the wms service direct.
+* Extended to generate pdf files.
+* Extended to attach the images as attachment to the presentation email.
+* Extended to use the wms service direct.
 
