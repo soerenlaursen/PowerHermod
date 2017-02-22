@@ -17,9 +17,11 @@ A folder with several configuration file, one for each presentation.
 
 The best way to use powerHermod is to have a cron jobs, which runs each hour.
 
+# 2017-02-22
+Added support for more than one folder with configuration in Grane.yaml
+
 # 2017-02-21
 Added support for multi configuration files in folder specified in Grane.yaml.
-
 
 # Roadmap
 (2017-02-18)

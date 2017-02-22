@@ -10,7 +10,9 @@ It defines classes_and_methods
 We are using the microsoft powerpoint module for python (python-pptx):
 https://python-pptx.readthedocs.org/en/latest/
 
-@author:     Soeren Laursen
+@version:    1.0
+
+@author:     Brian Soerensen, Soeren Laursen
 
 @copyright:  2014, 2015, 2016, 2017 FCOO. All rights reserved.
 
@@ -741,12 +743,19 @@ if __name__ == "__main__":
     graneYamlStream = file('Grane.yaml','r')
     graneConfiguration = yaml.load( graneYamlStream )
 
-    powerhermodConfigurationFiles = graneConfiguration['powerhermodConfigurations']
+    powerhermodConfigurationFolders = graneConfiguration['powerhermodConfigurations']
 
-    PowerHermodConfigurationFileStorage = os.path.join(os.path.normpath(powerhermodConfigurationFiles), "*.yaml")
+    # We can have more than one folder of configurations
+    powerHermodFolders = powerhermodConfigurationFolders.split(",")
 
-    for fname in glob.glob(PowerHermodConfigurationFileStorage):
-        print fname
-        stream = file(fname, 'r')
-        hermodConfiguration = yaml.load(stream)
-        processHermodSubscription( hermodConfiguration ) 
+    for powerHermodFolder in powerHermodFolders:
+
+        if len( powerHermodFolder.strip() ) > 0:
+            logger.info("Access folder : " + str( powerHermodFolder.strip()))
+            PowerHermodConfigurationFileStorage = os.path.join(os.path.normpath(powerHermodFolder.strip()), "*.yaml")
+
+            for fname in glob.glob(PowerHermodConfigurationFileStorage):
+                logger.info("Handle file : " + str( fname ))
+                stream = file(fname, 'r')
+                hermodConfiguration = yaml.load(stream)
+                processHermodSubscription( hermodConfiguration ) 

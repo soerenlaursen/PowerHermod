@@ -2,5 +2,6 @@
 description:      Default 
 operator:         your@email.dk
 smtpserver: 127.0.0.1
+# Support more than one folder, seperate with ',' for example: folder1, folder2
 powerhermodConfigurations:  /home/prod/MYLOCATION/Briefinger
 cutycaptLocation: /bin/cutycapt
