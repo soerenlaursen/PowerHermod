@@ -1,4 +1,4 @@
-#!/usr/local/bin/python2.7
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 '''
 PowerHermod.Grane -- shortdesc
@@ -9,8 +9,6 @@ It defines classes_and_methods
 
 We are using the microsoft powerpoint module for python (python-pptx):
 https://python-pptx.readthedocs.org/en/latest/
-
-@version:    1.0
 
 @author:     Brian Soerensen, Soeren Laursen
 
@@ -122,9 +120,9 @@ import yaml
 # We are planing to use a zipfile as a container for png files.
 
 __all__ = []
-__version__ = 0.1
-__date__ = '2014-04-08'
-__updated__ = '2016-03-10'
+__version__ = 1.0
+__date__ = '2017-02-22'
+__updated__ = '2017-02-22'
 
 DEBUG = 0
 TESTRUN = 0
@@ -239,7 +237,7 @@ def readAndVerifyEmailRecipient( recipientStringList ):
     return recipientArray
 
 
-def processHermodSubscription( hermonConfiguration ):
+def processHermodSubscription( hermonConfiguration, powerhermodConfigurationFiles):
     startdate = hermodConfiguration['startdate']
     enddate = hermodConfiguration['enddate']
 
@@ -758,4 +756,4 @@ if __name__ == "__main__":
                 logger.info("Handle file : " + str( fname ))
                 stream = file(fname, 'r')
                 hermodConfiguration = yaml.load(stream)
-                processHermodSubscription( hermodConfiguration ) 
+                processHermodSubscription( hermodConfiguration, powerHermodFolder.strip())
